@@ -7,6 +7,7 @@ dir_list = A01 \
            ALR01 \
            AP02 \
            AR01 \
+           B01 \
            BAKR01 \
            BAS01 \
            BASR01 \
