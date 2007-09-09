@@ -8,6 +8,7 @@ dir_list = A01 \
            AP02 \
            AR01 \
            B01 \
+           BAL01 \
            BAKR01 \
            BAS01 \
            BASR01 \
@@ -222,7 +223,7 @@ dir_list = A01 \
            XR01 \
            XR03 \
            ZAP01 \
-           ZAP02
+           ZAP02 
 
 all:
 	@set CDPATH=""; export CDPATH; \
