@@ -1,0 +1,23 @@
+DCB01   CSECT
+        LR    12,15
+        USING DCB01,12
+
+        L  2,BFLD1
+        OFADBGREG 2
+
+        L  2,BFLD2
+        OFADBGREG 2
+
+        L  2,BFLD3
+        OFADBGREG 2
+
+        L  2,BFLD4
+        OFADBGREG 2
+
+        BR 14
+
+BFLD1 DC B'10111'
+BFLD2 DC BL2'10111'
+BFLD3 DC BL1'10101010101'
+BFLD4 DC 2B'101101'
+        END
