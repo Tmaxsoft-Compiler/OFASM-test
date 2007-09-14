@@ -1,0 +1,35 @@
+LMG01      CSECT
+           LR        12,15
+           USING     LMG01,12
+           LA        13,DATA
+           LMG       15,11,0(13)
+           OFADBGREG 15
+           OFADBGREG 0
+           OFADBGREG 2
+           OFADBGREG 3
+           OFADBGREG 4
+           OFADBGREG 5
+           OFADBGREG 6
+           OFADBGREG 7
+           OFADBGREG 8
+           OFADBGREG 9
+           OFADBGREG 10
+           OFADBGREG 11
+           BR        14
+DATA       DC        XL8'AAAAAAAAAAAAAAAA'
+           DC        XL8'BBBBBBBBBBBBBBBB'
+           DC        XL8'CCCCCCCCCCCCCCCC'
+           DC        XL8'DDDDDDDDDDDDDDDD'
+           DC        XL8'EEEEEEEEEEEEEEEE'
+           DC        XL8'FFFFFFFFFFFFFFFF'
+           DC        XL8'0000000000000000'
+           DC        XL8'1111111111111111'
+           DC        XL8'2222222222222222'
+           DC        XL8'3333333333333333'
+           DC        XL8'4444444444444444'
+           DC        XL8'5555555555555555'
+           DC        XL8'6666666666666666'
+           DC        CL8'7777777777777777'
+           DC        CL8'8888888888888888'
+           DC        CL8'9999999999999999'
+           END

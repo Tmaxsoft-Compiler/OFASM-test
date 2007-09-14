@@ -1,0 +1,13 @@
+#include <stdlib.h>
+
+extern "C"
+{
+    extern int CVD01();
+
+    int main()
+    {
+        CVD01();
+
+        return 0;
+    }
+}

@@ -1,0 +1,20 @@
+{
+   "entry_list" : [
+      {
+         "entry_name" : "BCTR01",
+         "parameter" : [
+                {
+                  "param_size" : 10,
+                  "param_type" : "NP"
+                },
+                {
+                  "param_size" : 4,
+                  "param_type" : "NP"
+                }
+              ]
+      }
+   ],
+   "program_name" : "BCTR01",
+   "version" : 2
+}
+

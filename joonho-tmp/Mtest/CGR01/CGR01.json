@@ -1,0 +1,10 @@
+{
+   "entry_name" : "CGR01",
+   "parameter" : [
+      {
+         "param_size" : 4,
+         "param_type" : "NP"
+      }
+   ],
+   "program_name" : "CGR01"
+}
