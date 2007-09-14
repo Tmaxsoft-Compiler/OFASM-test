@@ -1,0 +1,3 @@
+Reg=[03], Hex=[0x00000000fffffffd], CC=[3]
+Reg=[03], Hex=[0x0000000000000000], CC=[2]
+Reg=[03], Hex=[0x00000000ffffffff], CC=[1]

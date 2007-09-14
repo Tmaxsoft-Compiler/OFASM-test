@@ -1,0 +1,58 @@
+/**********************************************************************
+1. OFASM INTERFACE MANIFEST MANUAL (based on manifest version 2)
+
+"program_name" : STRING
+STRING: shared object or excutable program name
+
+"entry_list" : JSON LIST
+JSON LIST: json object list that describe entires
+
+"entry_name" : STRING
+STRING: function or entry name
+
+"parameter" : JSON LIST
+JSON LIST: json object list that describe parameters
+
+"param_size" : INTEGER
+INTEGER: byte size of the parameter
+
+"param_type" : STRING
+STRING: parameter type "NP": not a pointer "P" a pointer
+
+"version" : INTEGER
+INTEGER: interface manifest version number
+
+2. EXAMPLE (MANIFEST VERSION 2)
+
+{
+   "entry_list" : [
+      {
+         "entry_name" : "ENTRY_NAME",
+         "parameter" : [
+           {
+            "param_size" : 4,
+            "param_type" : "NP"
+           },
+           {
+            "param_size" : 8,
+            "param_type" : "P"
+           }
+         ]
+      }
+   ],
+   "program_name" : "PROGRAM_NAME",
+   "version" : 2
+}
+
+**********************************************************************/
+
+{
+   "entry_list" : [
+      {
+         "entry_name" : "TEST",
+         "parameter" : []
+      }
+   ],
+   "program_name" : "TEST",
+   "version" : 2
+}
