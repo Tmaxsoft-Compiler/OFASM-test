@@ -1,0 +1,20 @@
+CLOSE01    CSECT
+           LR 12,15
+           USING CLOSE01,12
+           ST 14,SAVE
+
+           OPEN  (INDCB,(INPUT))
+           GET   INDCB,IOAREA
+           OPEN  INDCB2
+           CLOSE INDCB2
+
+           OFADBGMEM IOAREA,1
+
+           L  14,SAVE 
+           BR 14
+INDCB      DCB DDNAME=INDD,LRECL=80,BLKSIZE=1,DSORG=PS,MACRF=GM
+           DC  0H
+INDCB2     DCB DDNAME=INDD2,LRECL=80,BLKSIZE=1,DSORG=PS,MACRF=GM
+IOAREA     DS    CL80
+SAVE       DS    F
+           END
