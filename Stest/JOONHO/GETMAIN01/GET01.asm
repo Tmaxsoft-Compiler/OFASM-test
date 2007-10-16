@@ -1,0 +1,18 @@
+GET01 CSECT
+      USING GET01,12
+      LR 12,15
+      LR 11,14
+      LA 7,1000
+      GETMAIN RC,LOC=ANY,LV=(7)
+      C  1,=X'01000000'
+      BNL OKT
+NGT   OFADBGMEM NG,1
+      B  EXIT
+OKT   OFADBGMEM OK,1
+      B EXIT
+EXIT  EQU *
+      BR 11
+OK    DC C'OK'
+NG    DC C'NG'
+      END
+
