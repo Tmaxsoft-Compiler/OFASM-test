@@ -1,0 +1,14 @@
+{
+   "entry_name" : "BRCT01",
+   "parameter" : [
+      {
+         "param_size" : 4,
+         "param_type" : "NP"
+      },
+      {
+         "param_size" : 4,
+         "param_type" : "NP"
+      }
+   ],
+   "program_name" : "BRCT01"
+}

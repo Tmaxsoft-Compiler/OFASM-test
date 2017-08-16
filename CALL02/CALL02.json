@@ -1,0 +1,11 @@
+{
+    "entry_list" :
+    [
+        {
+            "entry_name" : "CALL02",
+            "fixed_parameter_list" : []
+        }
+    ],
+    "program_name" : "CALL02",
+    "version" : 3
+}
