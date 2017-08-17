@@ -1,0 +1,22 @@
+# ignore all
+*
+
+# unignore all dirs
+!.gitignore
+!*/
+
+# unignore *.asm
+!*.asm
+
+# unignore *.cpp
+!*.cpp
+
+# unignore *.json
+!*.json
+
+# unignore makefile
+!Makefile
+
+# unignore out.result
+!*.result
+

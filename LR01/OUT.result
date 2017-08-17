@@ -1,0 +1,6 @@
+Reg=[03], Hex=[0x00000000ffffffff], CC=[0]
+Reg=[04], Hex=[0x00000000ffffffff], CC=[0]
+Reg=[03], Hex=[0x000000007fffffff], CC=[0]
+Reg=[04], Hex=[0x000000007fffffff], CC=[0]
+Reg=[03], Hex=[0x00000000ffff8000], CC=[0]
+Reg=[04], Hex=[0x00000000ffff8000], CC=[0]
