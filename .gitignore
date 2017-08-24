@@ -11,6 +11,9 @@
 # unignore *.cpp
 !*.cpp
 
+# unignore *.c
+!*.c
+
 # unignore *.json
 !*.json
 
