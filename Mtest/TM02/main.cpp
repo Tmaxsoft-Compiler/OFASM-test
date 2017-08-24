@@ -4,11 +4,11 @@
 
 extern "C"
 {
-extern int STM01();
+extern int TM01();
 
 int main()
 {
-    STM01();
+    TM01();
     return 0;
 }
 }
