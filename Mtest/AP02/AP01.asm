@@ -9,10 +9,10 @@ AP01       CSECT
            LA        5,DATA
            LA        6,DATA2
            AP        0(2,5),0(2,6)
-           OFADBGMEM 0(4,5),0
+           OFADBGMEM 0(2,5),0
            LA        6,DATA3
            AP        0(2,5),0(2,6)
-           OFADBGMEM 0(4,5),0
+           OFADBGMEM 0(2,5),0
            BR        14
 DATA       DC        PL2'123'
 DATA2      DC        PL2'12'
