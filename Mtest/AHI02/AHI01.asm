@@ -8,5 +8,6 @@ AHI01      CSECT
            USING     AHI01,12
            L         5,=H'0000'
            AHI       5,10
+           OFADBGREG 5
            BR        14
            END

@@ -1,4 +1,4 @@
-target = TM01
+target = STM01
 
 result = OUT
 
@@ -11,18 +11,18 @@ CFLAGS += -g
 
 all: $(target)
 
-$(target): main.cpp TM01.asmo libTM01.so
-	g++ $(CFLAGS) -o $@ main.cpp -L./ -lTM01 $(LDFLAGS)
+$(target): main.cpp STM01.asmo libSTM01.so
+	g++ $(CFLAGS) -o $@ main.cpp -L./ -lSTM01 $(LDFLAGS)
 
-libTM01.so:
-	g++ -shared -fPIC $(CFLAGS) -o $@ TM01_interface.cpp
+libSTM01.so:
+	g++ -shared -fPIC $(CFLAGS) -o $@ STM01_interface.cpp
 
-TM01.asmo: TM01.asmi
-	$(OFASMC) -i TM01.asmi -o $@
+STM01.asmo: STM01.asmi
+	$(OFASMC) -i STM01.asmi -o $@
 
-TM01.asmi: TM01.asm
-	$(OFASMIF) -i TM01.json
-	$(OFASMPP) -i TM01.asm -o $@
+STM01.asmi: STM01.asm
+	$(OFASMIF) -i STM01.json
+	$(OFASMPP) -i STM01.asm -o $@
 
 clean:
 	$(RM) $(target) *.so *.asmo *.asmi OUT *_interface.cpp

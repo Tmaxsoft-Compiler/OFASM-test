@@ -6,6 +6,8 @@
 L01        CSECT
            LR        12,15
            USING     L01,12
+           L         5,=X'ABCD'
+           OFADBGREG 5
            L         5,=X'0000ABCD'
            OFADBGREG 5
            BR        14

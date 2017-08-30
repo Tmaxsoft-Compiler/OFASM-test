@@ -10,5 +10,9 @@ LH01       CSECT
            OFADBGREG 5
            LH        5,=H'-234'
            OFADBGREG 5
+           LH        5,=H'32767'
+           OFADBGREG 5
+           LH        5,=H'32768'
+           OFADBGREG 5
            BR        14
            END

@@ -4,11 +4,11 @@
 
 extern "C"
 {
-extern int AH01();
+extern int AHI01();
 
 int main()
 {
-    AH01();
+    AHI01();
     return 0;
 }
 }

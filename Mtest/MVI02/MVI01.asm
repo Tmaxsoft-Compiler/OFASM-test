@@ -11,5 +11,5 @@ MVI01      CSECT
            MVI       0(5),X'34'
            OFADBGMEM 0(4,5),0
            BR        14
-DATA       DC        XL2'ABCD'
+DATA       DC        XL4'ABCD8712'
            END
