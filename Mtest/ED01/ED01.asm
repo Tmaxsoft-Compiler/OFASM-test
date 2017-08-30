@@ -8,8 +8,6 @@ ED01       CSECT
            USING     ED01,12
            LA        5,DATA
            LA        6,PATTERN
-           OFADBGREG 5
-           OFADBGREG 6
            OFADBGMEM PATTERN,0
            ED        0(13,6),0(5)
            OFADBGMEM PATTERN,0

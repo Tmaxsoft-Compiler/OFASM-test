@@ -16,7 +16,6 @@ CLC01      CSECT
 * CC = 0
 *
            CLC       0(5,5),0(6)
-           OFADBGREG 5
 *
 * R5 = HELLO
 * R6 = WORLD
@@ -25,7 +24,6 @@ CLC01      CSECT
            LA        6,DATA2
            OFADBGMEM 0(5,6),0
            CLC       0(5,5),0(6)
-           OFADBGREG 5
 *
 * R5 = HELLO
 * R6 = HELLJ
@@ -34,7 +32,6 @@ CLC01      CSECT
            LA        6,DATA4
            OFADBGMEM 0(5,6),0
            CLC       0(5,5),0(6)
-           OFADBGREG 5
            BR        14
            END
 DATA1      DC        CL5'HELLO'

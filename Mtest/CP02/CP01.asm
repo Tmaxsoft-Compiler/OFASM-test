@@ -9,13 +9,13 @@ CP01       CSECT
            LA        5,DATA
            LA        6,DATA2
            CP        0(2,5),0(2,6)
-           OFADBGREG 5
+           OFADBGREG 4
            LA        6,DATA
            CP        0(2,5),0(2,6)
-           OFADBGREG 5
+           OFADBGREG 4
            LA        5,DATA2
            CP        0(2,5),0(2,6)
-           OFADBGREG 5
+           OFADBGREG 4
 
            BR        14
 DATA       DC        PL2'123'

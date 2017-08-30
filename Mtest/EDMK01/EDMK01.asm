@@ -8,8 +8,6 @@ EDMK01     CSECT
            USING     EDMK01,12
            LA        5,DATA
            LA        6,PATTERN
-           OFADBGREG 5
-           OFADBGREG 6
            LA        1,6(0,6)
            OFADBGMEM PATTERN,0
            EDMK      0(13,6),0(5)
