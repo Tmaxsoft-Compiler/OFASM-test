@@ -12,10 +12,8 @@ XI01        CSECT
             USING       XI01,12
             LA          2,DATA1
             L           3,DATA1
-            OFADBGREG   2
             OFADBGREG   3
             XI          0(2),10
-            OFADBGREG   2
             L           4,DATA1
             OFADBGREG   4
             BR          14
