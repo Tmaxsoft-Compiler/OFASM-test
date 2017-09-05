@@ -3,6 +3,9 @@ COPXOR      CSECT
             USING     PSA,0
             L         7,FLCCVT
             USING     CVT,7
+* CVTSNAME 
+            LG        5,340(7) 
+            OFADBGREG 5
             L         6,PSATOLD
             USING     TCB,6
             L         6,TCBEXT2
