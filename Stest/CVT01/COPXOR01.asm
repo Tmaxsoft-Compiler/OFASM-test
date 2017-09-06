@@ -7,8 +7,6 @@ COPXOR      CSECT
 * CVTSNAME 
             OFADBGMEM 340(8,7),1
             OFADBGMEM CVTSNAME,1
-            LG        5,340(7) 
-            OFADBGREG 5
             L         6,PSATOLD
             USING     TCB,6
             L         6,TCBEXT2
