@@ -1,11 +1,12 @@
 COPXOR      CSECT
             LR        12,15
+            USING     COPXOR,12
             USING     PSA,0
             L         7,FLCCVT
             USING     CVT,7
 * CVTSNAME 
-            LG        5,340(7) 
-            OFADBGREG 5
+            OFADBGMEM 340(8,7),1
+            OFADBGMEM CVTSNAME,1
             L         6,PSATOLD
             USING     TCB,6
             L         6,TCBEXT2
