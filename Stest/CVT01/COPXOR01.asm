@@ -1,12 +1,20 @@
 COPXOR      CSECT
             LR        12,15
+<<<<<<< HEAD
             USING     COPXOR,12
+=======
+>>>>>>> 027d265117973ce7b5f71d8cebbb5519b39445d1
             USING     PSA,0
             L         7,FLCCVT
             USING     CVT,7
 * CVTSNAME 
+<<<<<<< HEAD
             OFADBGMEM 340(8,7),1
             OFADBGMEM CVTSNAME,1
+=======
+            LG        5,340(7) 
+            OFADBGREG 5
+>>>>>>> 027d265117973ce7b5f71d8cebbb5519b39445d1
             L         6,PSATOLD
             USING     TCB,6
             L         6,TCBEXT2
