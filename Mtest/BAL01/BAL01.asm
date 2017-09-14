@@ -1,11 +1,11 @@
 *************************************************
-* FILENAME : BAL02.asm
+* FILENAME : BAL01.asm
 * AUTHOR : HYUK KIM
 * SYSTEM : OFASM v4 revision 113
 *************************************************
-BAL02      CSECT
+BAL01      CSECT
            LR          12,15
-           USING       BAL02,12
+           USING       BAL01,12
 
            L           5,=X'BBBBBBBB'
 *           OFADBGREG   5

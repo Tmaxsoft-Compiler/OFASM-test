@@ -2,6 +2,7 @@ dir_list = A01 \
            AH01 \
            AH02 \
            AH03 \
+           AH04 \
            AHI02 \
            AL01 \
            ALR01 \
@@ -9,9 +10,17 @@ dir_list = A01 \
            AR01 \
            B01 \
            BAKR01 \
+           BAKR02 \
+           BAL01 \
+           BALR01 \
            BAS01 \
+           BAS02 \
            BASR01 \
+           BASR02 \
+           BASSM01 \
            BC01 \
+           BC02 \
+           BCR02 \
            BCT01 \
            BE01 \
            BH01 \
@@ -38,7 +47,9 @@ dir_list = A01 \
            BRCT01 \
            BRXH01 \
            BRXLE01 \
+           BSM03 \
            BXH01 \
+           BXH02 \
            BXLE01 \
            BZ01 \
            CALL01 \
@@ -155,10 +166,15 @@ dir_list = A01 \
            MVZ01 \
            N01 \
            N02 \
+           N03 \
            NC01 \
            NC02 \
+           NC03 \
+           NI01 \
+           NI02 \
            NR01 \
            NR02 \
+           NR03 \
            O01 \
            O02 \
            OC01 \
@@ -224,6 +240,10 @@ dir_list = A01 \
            ZAP01 \
            ZAP02
 
+exclude_dir_list = BCR01 \
+           BSM01 \
+           BSM02 
+         
 all:
 	@set CDPATH=""; export CDPATH; \
 	for dir in $(dir_list); do \
@@ -269,4 +289,5 @@ clean:
 		cd $(CURDIR); \
 	fi; \
 	done;
+
 
