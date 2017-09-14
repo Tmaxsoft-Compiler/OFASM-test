@@ -1,0 +1,8 @@
+Reg=[02], Hex=[0xffffffffffffffff], CC=[0]
+Reg=[02], Hex=[0xfffffffffffff00f], CC=[1]
+Reg=[02], Hex=[0xffffffffffffffff], CC=[1]
+Reg=[02], Hex=[0xffffffffffff00ff], CC=[1]
+Reg=[02], Hex=[0xffffffffffffffff], CC=[1]
+Reg=[02], Hex=[0xffffffffffff0000], CC=[1]
+Reg=[02], Hex=[0xffffffffffffffff], CC=[1]
+Reg=[02], Hex=[0xffffffffffff0ff0], CC=[1]

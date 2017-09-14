@@ -1,0 +1,15 @@
+DCH01   CSECT
+        LR    12,15
+        USING DCH01,12
+
+        OFADBGMEM HFLD1,0
+        OFADBGMEM HFLD2,0
+        OFADBGMEM HFLD3,0
+
+        BR 14
+
+HFLD1   DC HL2'10'
+HFLD2   DC HL1'-5'
+HFLD3   DC 2HL1'5'
+        END
+
