@@ -18,6 +18,7 @@
 
 # unignore *.json
 !*.json
+test_log.json
 
 # unignore makefile
 !Makefile

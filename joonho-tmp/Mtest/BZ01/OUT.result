@@ -1,3 +1,0 @@
-Reg=[04], Hex=[0x0000000000000000], CC=[0]
-Reg=[04], Hex=[0x00000000ffffffff], CC=[1]
-Reg=[04], Hex=[0x00000000ffffffff], CC=[2]
