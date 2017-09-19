@@ -26,3 +26,6 @@ test_log.json
 # unignore out.result
 !*.result
 
+# unignore OFASMtest.py
+!OFASMtest.py
+
