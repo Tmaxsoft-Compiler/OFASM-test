@@ -1,0 +1,13 @@
+extern "C"
+{
+extern int BCTR01(char *p0, char *p1);
+
+int main()
+{
+    char p0[10] = {0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0x40, 0XC7, 0xC8, 0xC9};
+    char p1[4]  = {0x00, 0x00, 0x00, 0x0A};
+ 
+    BCTR01(p0, p1);
+    return 0;
+}
+}

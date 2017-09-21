@@ -18,10 +18,14 @@
 
 # unignore *.json
 !*.json
+test_log.json
 
 # unignore makefile
 !Makefile
 
 # unignore out.result
 !*.result
+
+# unignore OFASMtest.py
+!OFASMtest.py
 
