@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from subprocess import call
 import subprocess
 import os
 import argparse
 import re
 import json
+import collections
 
 class bcolors:
     HEADER = '\033[95m'
@@ -29,21 +29,54 @@ def walklevel(some_dir, level=1):
         if num_sep + level <= num_sep_this:
             del _dirs[:]
 
+# def listTestCode():
+#     for root, dirs, files, depth in walklevel('.', 3):
+#         if '.git' in dirs:
+#             dirs.remove('.git')
+#         path = root.split(os.sep)
+
+#         try:
+#           if depth == 1:
+#               print (len(path) - 1) * '==' + os.path.basename(root)
+#           elif depth == 3:
+#               print (len(path) - 1) * '---' + path[2] + '.' + path[3]
+#         except IndexError:
+#             print "check folder structure"
+#             print "<instruction_category> - <author_name> - <instruction_name##>"
+#             return
+
 def listTestCode():
+    instruction_list = {}
     for root, dirs, files, depth in walklevel('.', 3):
         if '.git' in dirs:
             dirs.remove('.git')
         path = root.split(os.sep)
 
-        try:
-          if depth == 1:
-              print (len(path) - 1) * '==' + os.path.basename(root)
-          elif depth == 3:
-              print (len(path) - 1) * '---' + path[2] + '.' + path[3]
+        try: 
+            # if depth == 1:
+            #     print (len(path) - 1) * '==' + os.path.basename(root)
+            if depth == 3:
+                if not path[1] in instruction_list:
+                    instruction_list[path[1]] = {}
+                name = re.search('[a-zA-Z]+', path[3]).group(0)
+                if name in instruction_list[path[1]]:
+                    instruction_list[path[1]][name] += 1
+                else:
+                    instruction_list[path[1]][name] = 1
         except IndexError:
-          print "check folder structure"
-          print "<instruction_category> - <author_name> - <instruction_name##>"
-          return
+            print IndexError.message
+            print "check folder structure"
+            print "<instruction_category> - <author_name> - <instruction_name##>"
+            return
+    
+    for key in instruction_list:
+        print bcolors.HEADER + key + bcolors.ENDC
+        ordered_list = collections.OrderedDict(sorted(instruction_list[key].items()))
+        total_cnt = 0
+        for instruction in ordered_list:
+            print "===={0:20} ({1})".format(instruction, str(ordered_list[instruction]))
+            total_cnt += ordered_list[instruction]
+        print "total: {0}".format(total_cnt)
 
 def runTest(category, author, instruction_name):
     run_result = []
