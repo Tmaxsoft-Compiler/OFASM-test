@@ -1,0 +1,10 @@
+{
+ "entry_list" : [
+    {
+      "entry_name" : "CLOSE01",
+      "fixed_parameter_list" : []
+    }
+  ],
+ "program_name" : "CLOSE01",
+ "version" : 3
+}
