@@ -32,23 +32,3 @@ install:
 test:
 		   @./$(target) > OUT
 		   @diff $(result) $(result).result
-JSON = "{\
-\"entry_name\":\"$(target)\",\
-\"parameter\":[],\
-\"program_name\":\"$(target)\"\
-}"
-
-MAIN = "extern \"C\"{ extern int $(target)();\
-int main(){int ret = $(target)();return 0;}}\
-"
-
-ASM = "$(target) CSECT\
-LR          12,15\
-USING       $(target),12\
-BR          14\
-END\
-"
-init:
-		   @if [ -a $(target).json ]; then echo "json already exits."; else echo $(JSON) > $(target).json; fi;
-		   @if [ -a main.cpp ]; then echo "main already exits."; else echo $(MAIN) > main.cpp; fi;
-		   @if [ -a $(target).asm ]; then echo "asm already exits."; else echo $(ASM) > $(target).asm; fi;
