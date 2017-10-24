@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : OI00.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
                 MACRO
                 MACRO_OI    &VALUE1,&VALUE2
                 LA          2,&VALUE2

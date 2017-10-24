@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : UNPK00.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
                 MACRO
                 MAC_UNPK    &VALUE1,&VALUE2
                 OFADBGMEM   &VALUE1,0

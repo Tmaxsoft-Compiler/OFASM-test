@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : PACK00.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
                 MACRO
                 MAC_PACK    &VALUE1,&VALUE2
                 OFADBGMEM   &VALUE1,0

@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : BXH02.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
 BXH02           CSECT
                 LR          12,15
                 USING       BXH02,12

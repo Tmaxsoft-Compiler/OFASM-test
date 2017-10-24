@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : XC00.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
                 MACRO
                 MACRO_XC    &VALUE1,&VALUE2
                 LA          2,0
