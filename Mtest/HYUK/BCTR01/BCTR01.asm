@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : BCTR01.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
 BCTR01          CSECT
                 LR          12,15
                 USING       BCTR01,12

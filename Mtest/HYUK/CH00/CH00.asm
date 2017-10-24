@@ -1,3 +1,8 @@
+*************************************************
+* FILENAME : CH00.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
         MACRO
         MACRO_CH    &VALUE1,&VALUE2
         LG          2,&VALUE1
