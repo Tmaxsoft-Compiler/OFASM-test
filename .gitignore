@@ -23,9 +23,14 @@ test_log.json
 # unignore makefile
 !Makefile
 
-# unignore out.result
+# unignore out.result or OTDATA
 !*.result
 
 # unignore OFASMtest.py
 !OFASMtest.py
+
+# unignore jcl, indata
+!INDATA
+!*.jcl
+!README
 
