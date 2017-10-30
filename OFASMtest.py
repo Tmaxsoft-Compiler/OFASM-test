@@ -76,7 +76,6 @@ class OFASMTest:
             clean_string = self.base_command_string.format(item['category'], item['author'], item['instruction'], "make clean")
             
             p = subprocess.Popen(clean_string, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            print "./%s/%s/%s" % (item['category'], item['author'], item['instruction'])
             for line in p.stderr.readlines():
                 print line,
             p.wait()
@@ -124,6 +123,7 @@ class OFASMTest:
                 }
                 self.fail_test.append(res)
                 self.run_result_list.append(res)
+                return
             else:
                 res = {
                     "category": item['category'],
@@ -149,8 +149,10 @@ class OFASMTest:
             try:
                 if depth == 3:
                     for item in self.excluded_list:
-                        if item['category'] in path[1] and item['author'] in path[2] and regexp.search(path[3]):
+                        reg = re.compile('^%s[0-9]*$' % item['instruction'])
+                        if item['category'] in path[1] and item['author'] in path[2] and item['instruction'] in path[3]:
                             flag = True
+                            break
                         else:
                             flag = False
                     if flag:
