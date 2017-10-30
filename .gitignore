@@ -2,6 +2,7 @@
 *
 
 # unignore all dirs
+!.excluded_test
 !.gitignore
 !*/
 
@@ -10,7 +11,7 @@
 
 # unignore *.cpp
 !*.cpp
-*_interface.cpp
+!*_interface.cpp
 *_OFASM_VM_ENTRY.cpp
 
 # unignore *.c
