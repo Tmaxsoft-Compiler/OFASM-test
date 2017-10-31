@@ -1,0 +1,74 @@
+*************************************************
+* FILENAME : LTR00.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
+                MACRO
+                MAC_LTR     &VALUE1,&VALUE2
+                LG          2,&VALUE1
+                LG          3,&VALUE2
+                OFADBGREG   2
+                OFADBGREG   3
+                LTR         2,3
+                OFADBGREG   2
+                OFADBGREG   3
+                MEND
+LTR00           CSECT
+                LR          12,15
+                USING       LTR00,12
+* TESTCASE_1	R1=0	16bits	R2=0	16bits
+                MAC_LTR     =X'FFFFFFFFFFFF0000',=X'FFFFFFFFFFFF0000'
+* TESTCASE_12	R1=0	16bits	R2>0	16bits
+                MAC_LTR     =X'FFFFFFFFFFFF0000',=X'FFFFFFFFFFFF1000'
+* TESTCASE_20	R1=0	16bits	R2<0	16bits
+                MAC_LTR     =X'FFFFFFFFFFFF0000',=X'0000000000008000'
+* TESTCASE_31	R1=0	32bits	R2=0	32bits
+                MAC_LTR     =X'FFFFFFFF00000000',=X'FFFFFFFF00000000'
+* TESTCASE_42	R1=0	32bits	R2>0	32bits
+                MAC_LTR     =X'FFFFFFFF00000000',=X'FFFFFFFF10000000'
+* TESTCASE_50	R1=0	32bits	R2<0	32bits
+                MAC_LTR     =X'FFFFFFFF00000000',=X'0000000080000000'
+* TESTCASE_61	R1=0	64bits	R2=0	64bits
+                MAC_LTR     =X'0000000000000000',=X'0000000000000000'
+* TESTCASE_72	R1=0	64bits	R2>0	64bits
+                MAC_LTR     =X'0000000000000000',=X'1000000000000000'
+* TESTCASE_80	R1=0	64bits	R2<0	64bits
+                MAC_LTR     =X'0000000000000000',=X'8000000000000000'
+* TESTCASE_82	R1>0	16bits	R2=0	16bits
+                MAC_LTR     =X'FFFFFFFFFFFF1000',=X'FFFFFFFFFFFF0000'
+* TESTCASE_93	R1>0	16bits	R2>0	16bits
+                MAC_LTR     =X'FFFFFFFFFFFF1000',=X'FFFFFFFFFFFF1000'
+* TESTCASE_101	R1>0	16bits	R2<0	16bits
+                MAC_LTR     =X'FFFFFFFFFFFF1000',=X'0000000000008000'
+* TESTCASE_112	R1>0	32bits	R2=0	32bits
+                MAC_LTR     =X'FFFFFFFF10000000',=X'FFFFFFFF00000000'
+* TESTCASE_123	R1>0	32bits	R2>0	32bits
+                MAC_LTR     =X'FFFFFFFF10000000',=X'FFFFFFFF10000000'
+* TESTCASE_131	R1>0	32bits	R2<0	32bits
+                MAC_LTR     =X'FFFFFFFF10000000',=X'0000000080000000'
+* TESTCASE_142	R1>0	64bits	R2=0	64bits
+                MAC_LTR     =X'1000000000000000',=X'0000000000000000'
+* TESTCASE_153	R1>0	64bits	R2>0	64bits
+                MAC_LTR     =X'1000000000000000',=X'1000000000000000'
+* TESTCASE_161	R1>0	64bits	R2<0	64bits
+                MAC_LTR     =X'1000000000000000',=X'8000000000000000'
+* TESTCASE_163	R1<0	16bits	R2=0	16bits
+                MAC_LTR     =X'0000000000008000',=X'FFFFFFFFFFFF0000'
+* TESTCASE_174	R1<0	16bits	R2>0	16bits
+                MAC_LTR     =X'0000000000008000',=X'FFFFFFFFFFFF1000'
+* TESTCASE_182	R1<0	16bits	R2<0	16bits
+                MAC_LTR     =X'0000000000008000',=X'FFFFFFFFFFFF8000'
+* TESTCASE_193	R1<0	32bits	R2=0	32bits
+                MAC_LTR     =X'0000000080000000',=X'FFFFFFFF00000000'
+* TESTCASE_204	R1<0	32bits	R2>0	32bits
+                MAC_LTR     =X'0000000080000000',=X'FFFFFFFF10000000'
+* TESTCASE_212	R1<0	32bits	R2<0	32bits
+                MAC_LTR     =X'0000000080000000',=X'0000000080000000'
+* TESTCASE_223	R1<0	64bits	R2=0	64bits
+                MAC_LTR     =X'8000000000000000',=X'0000000000000000'
+* TESTCASE_234	R1<0	64bits	R2>0	64bits
+                MAC_LTR     =X'8000000000000000',=X'1000000000000000'
+* TESTCASE_242	R1<0	64bits	R2<0	64bits
+                MAC_LTR     =X'8000000000000000',=X'8000000000000000'
+                BR          14
+                END 
