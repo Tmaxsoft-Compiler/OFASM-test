@@ -1,0 +1,100 @@
+*************************************************
+* FILENAME : D02.asm
+* AUTHOR : HYUK KIM
+* SYSTEM : OFASM v4 revision 169
+*************************************************
+                MACRO
+                MACRO_D     &VALUE1,&VALUE2,&REGNO
+                LG          &REGNO,DATA_INIT_REG
+                LG          &REGNO+1,DATA_INIT_REG
+                L           &REGNO,&VALUE1
+                L           &REGNO+1,&VALUE1+4
+                OFADBGREG   &REGNO
+                OFADBGREG   &REGNO+1
+                OFADBGMEM   &VALUE2,0
+                D           &REGNO,&VALUE2
+                OFADBGREG   &REGNO
+                OFADBGREG   &REGNO+1
+                OFADBGMEM   &VALUE2,0
+                MEND
+D02             CSECT
+                LR          12,15
+                USING       D02,12
+* TESTCASE_2	0	16bits	0	32bits
+                MACRO_D     DATA2_1,DATA2_2,2
+* TESTCASE_3	0	16bits	0	32bits<
+*                MACRO_D     DATA3_1,DATA3_2,2
+* TESTCASE_11	0	32bits	0	32bits
+*                MACRO_D     DATA11_1,DATA11_2,2
+* TESTCASE_12	0	32bits	0	32bits<
+*                MACRO_D     DATA12_1,DATA12_2,2
+* TESTCASE_20	0	64bits	0	32bits
+*                MACRO_D     DATA20_1,DATA20_2,2
+* TESTCASE_21	0	64bits	0	32bits<
+*                MACRO_D     DATA21_1,DATA21_2,2
+* TESTCASE_29	0<	16bits	0	32bits
+*                MACRO_D     DATA29_1,DATA29_2,2
+* TESTCASE_30	0<	16bits	0	32bits<
+*                MACRO_D     DATA30_1,DATA30_2,2
+* TESTCASE_38	0<	32bits	0	32bits
+*                MACRO_D     DATA38_1,DATA38_2,2
+* TESTCASE_39	0<	32bits	0	32bits<
+*                MACRO_D     DATA39_1,DATA39_2,2
+* TESTCASE_47   0<      64bits  0       32bits
+*                MACRO_D     DATA47_1,DATA47_2,2
+* TESTCASE_48   0<      64bits  0       32bits<
+*                MACRO_D     DATA48_1,DATA48_2,2
+* TESTCASE_56   0>      16bits  0       32bits
+*                MACRO_D     DATA56_1,DATA56_2,2
+* TESTCASE_57   0>      16bits  0       32bits<
+*                MACRO_D     DATA57_1,DATA57_2,2
+* TESTCASE_65   0>      32bits  0       32bits
+*                MACRO_D     DATA65_1,DATA65_2,2
+* TESTCASE_66   0>      32bits  0       32bits<
+*                MACRO_D     DATA66_1,DATA66_2,2
+* TESTCASE_74   0>      64bits  0       32bits
+*                MACRO_D     DATA74_1,DATA74_2,2
+* TESTCASE_75   0>      64bits  0       32bits<
+*                MACRO_D     DATA75_1,DATA75_2,2
+
+                BR          14
+DATA_INIT_REG DC X'0416041600000000'
+DATA2_1 DC X'FEDCBA9876540000'
+DATA2_2 DC X'00000000'
+DATA3_1 DC X'FEDCBA9876540000'
+DATA3_2 DC X'0000000000000000'
+DATA11_1 DC X'FEDCBA9800000000'
+DATA11_2 DC X'00000000'
+DATA12_1 DC X'FEDCBA9800000000'
+DATA12_2 DC X'0000000000000000'
+ DC X'0416'
+DATA20_1 DC X'0000000000000000'
+DATA20_2 DC X'00000000'
+DATA21_1 DC X'0000000000000000'
+DATA21_2 DC X'0000000000000000'
+DATA29_1 DC X'FEDCBA9876547FFF'
+DATA29_2 DC X'00000000'
+DATA30_1 DC X'FEDCBA9876547FFF'
+DATA30_2 DC X'0000000000000000'
+DATA38_1 DC X'FEDCBA987FFFFFFF'
+DATA38_2 DC X'00000000'
+DATA39_1 DC X'FEDCBA987FFFFFFF'
+DATA39_2 DC X'0000000000000000'
+DATA47_1 DC X'7FFFFFFFFFFFFFFF'
+DATA47_2 DC X'00000000'
+DATA48_1 DC X'7FFFFFFFFFFFFFFF'
+DATA48_2 DC X'0000000000000000'
+DATA56_1 DC X'FEDCBA9876548000'
+DATA56_2 DC X'00000000'
+DATA57_1 DC X'FEDCBA9876548000'
+DATA57_2 DC X'0000000000000000'
+DATA65_1 DC X'FEDCBA9880000000'
+DATA65_2 DC X'00000000'
+DATA66_1 DC X'FEDCBA9880000000'
+DATA66_2 DC X'0000000000000000'
+DATA74_1 DC X'8000000000000000'
+DATA74_2 DC X'00000000'
+DATA75_1 DC X'8000000000000000'
+DATA75_2 DC X'0000000000000000'
+
+                END
