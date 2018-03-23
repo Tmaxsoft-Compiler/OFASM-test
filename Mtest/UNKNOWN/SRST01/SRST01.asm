@@ -19,6 +19,7 @@ SRST01       CSECT
            USING     SRST01,R12
 *
            L         R0,ENDCHAR
+           N         R0,=X'000000FF'
 *
            LA        R3,DATA02
            LA        R4,DATA01
